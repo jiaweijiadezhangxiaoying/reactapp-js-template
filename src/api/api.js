@@ -7,6 +7,7 @@ let http = axios.create({
   timeout: 50000,
   headers: { 'Content-Type': 'text/plain' }
 });
+
 // 添加请求拦截器
 http.interceptors.request.use(function (config) {
   // 在发送请求之前做些什么
