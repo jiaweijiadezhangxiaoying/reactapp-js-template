@@ -1,6 +1,6 @@
 import http from "./api.js";
 
-export function apiUserLogin(data) {
+export function apiUserLogin (data) {
     return http({
         method: "POST",
         url: "/api/login",
@@ -8,7 +8,7 @@ export function apiUserLogin(data) {
     })
 }
 
-export function apiGetList(params) {
+export function apiGetList (params) {
     return http({
         url: "/api/userInfo",
         params

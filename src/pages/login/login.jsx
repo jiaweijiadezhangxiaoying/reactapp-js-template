@@ -8,6 +8,9 @@ class LoginFrom extends React.Component {
     constructor(props) {
         super(props);
         console.log(this.props);
+        this.state = {
+            name: 1
+        }
     }
     userLogin (values) {
         let data = {
@@ -28,7 +31,10 @@ class LoginFrom extends React.Component {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
             if (!err) {
-                this.userLogin(values)
+                // this.userLogin(values)
+                this.setState({
+                    name: 123
+                })
             }
         });
     }
