@@ -1,22 +1,15 @@
-import React from "react"
-import { HashRouter as Router, Route, Switch, Redirect } from "react-router-dom"
+import React, { Component } from 'react';
+import { HashRouter as Router } from "react-router-dom";
+import Login from "../views/login/login.jsx";
+import Home from "../views/home/home.jsx";
 
-
-import Lgin from "../pages/login/login"
-import Home from "../pages/home/home"
-
-export default () => {
-    return (
-        <div className="app">
+export default class Routers extends Component {
+    render() {
+        return (
             <Router>
-                <Switch>
-                    <Route exact path="/" component={() =>
-                        <Redirect to="/login" />
-                    } />
-                    <Route exact path="/login" component={Lgin} />
-                    <Route exact path="/home" component={Home} />
-                </Switch>
+                <Login />
+                <Home />
             </Router>
-        </div>
-    )
+        );
+    }
 }

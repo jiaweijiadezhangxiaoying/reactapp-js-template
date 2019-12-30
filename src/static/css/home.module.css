@@ -1,0 +1,13 @@
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container .header {
+  height: 60px;
+  background-color: #000;
+}
+.container .nav{
+    flex: 1;
+}
